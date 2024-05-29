@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Change Button</title>
+    <style>
+      /* Basic button styling */
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+ 
+    <button id="colorButton">Click Me!</button>
+
+    <script>
+  
+      const colors = ["red", "blue", "green", "yellow", "purple"];
+      let colorIndex = 0; // To keep track of the current color
+
+  
+      function changeButtonColor() {
+ 
+        document.getElementById("colorButton").style.backgroundColor =
+          colors[colorIndex];
+
+        colorIndex = (colorIndex + 1) % colors.length;
+      }
+
+  
+      document
+        .getElementById("colorButton")
+        .addEventListener("click", changeButtonColor);
+    </script>
+
+
+    <script>
+      function greet() {
+        var date = new Date();
+        var hours = date.getHours();
+        var greeting;
+
+        if (hours < 12) {
+          greeting = "Good Morning!";
+        } else if (hours < 17) {
+          greeting = "Good Afternoon!";
+        } else {
+          greeting = "Good Evening!";
+        }
+
+        alert(greeting);
+      }
+
+      greet();
+    </script>
+  </body>
+</html>
